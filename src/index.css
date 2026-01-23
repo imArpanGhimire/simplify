@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Frick';
+    src: url('./fonts/Frick03-Regular.otf') format('opentype');
+}
+
+@theme {
+    --font-family-frick: 'Frick', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+}
