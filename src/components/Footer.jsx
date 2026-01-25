@@ -5,7 +5,7 @@ const Footer = () => {
             {/* Curved background shape */}
             <div className="relative -mb-1">
                 <svg
-                    viewBox="0 0 1200 100"
+                    viewBox="0 0 1100 100"
                     preserveAspectRatio="none"
                     className="w-full h-20"
                 >

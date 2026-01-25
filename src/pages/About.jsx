@@ -1,9 +1,10 @@
 import React from 'react'
+import { StickyScrollRevealDemo } from '../components/ui/StickyScrollRevealDemo'
 
 const About = () => {
     return (
-        <div>
-
+        <div className='mt-20'>
+            <StickyScrollRevealDemo />
         </div>
     )
 }
