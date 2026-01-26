@@ -4,8 +4,7 @@ import AnimatedTabs from '../pages/AnimatedTabs'
 const Getstarted = () => {
     return (
         <div>
-            {/* <AnimatedTabs /> */}
-
+            <p>yo chai sign up page. </p>
         </div>
     )
 }

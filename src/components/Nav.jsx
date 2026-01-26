@@ -12,7 +12,7 @@ const Nav = () => {
                 <Link to="/">
                     <p className="inline-flex items-center gap-2">
                         <ScanQrCode />
-                        <span className="text-zinc-700">Simplify</span>
+                        <span className="text-zinc-700 font-family-frick">Simplify</span>
                     </p>
                 </Link>
             </div>
@@ -21,9 +21,11 @@ const Nav = () => {
             <AnimatedTabs />
 
             {/* RIGHT BUTTON */}
-            <button className="bg-teal-500 hover:bg-teal-600 cursor-pointer font-semibold text-white px-6 py-2 rounded-full text-sm">
-                Sign-In
-            </button>
+            <Link to='/Login'>
+                <button className="bg-teal-500 hover:bg-teal-600 cursor-pointer font-semibold text-white px-6 py-2 rounded-full text-sm">
+                    Log-In
+                </button>
+            </Link>
         </nav>
     );
 };

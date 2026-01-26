@@ -10,6 +10,7 @@ import Getstarted from './components/Getstarted';
 import Footer from './components/Footer';
 import Cards from './components/Cards';
 import ReactLenis from 'lenis/react';
+import Queries from './components/Queries';
 function App() {
 
   return (
@@ -20,10 +21,11 @@ function App() {
           <Routes>
 
             <Route path='/' element={<Landing />} />
-            <Route path='/aboutUs' element={<About />} />
+            <Route path='/about' element={<About />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/LearnMore' element={<LearnMore />} />
             <Route path='/Getstarted' element={<Getstarted />} />
+            <Route path='/queries' element={<Queries />} />
           </Routes>
           {/* <About /> */}
 
