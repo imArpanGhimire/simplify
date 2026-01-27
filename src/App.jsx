@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Cards from './components/Cards';
 import ReactLenis from 'lenis/react';
 import Queries from './components/Queries';
+import Contact from './pages/Contact';
 function App() {
 
   return (
@@ -22,12 +23,12 @@ function App() {
 
             <Route path='/' element={<Landing />} />
             <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/LearnMore' element={<LearnMore />} />
             <Route path='/Getstarted' element={<Getstarted />} />
             <Route path='/queries' element={<Queries />} />
           </Routes>
-          {/* <About /> */}
 
           {/* <Footer /> */}
         </div>

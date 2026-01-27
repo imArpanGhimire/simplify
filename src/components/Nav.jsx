@@ -8,11 +8,11 @@ const Nav = () => {
     return (
         <nav className="px-8 flex items-center justify-between">
             {/* LOGO */}
-            <div className="text-3xl font-bold italic text-gray-800">
+            <div className="text-3xl font-bold  text-gray-800">
                 <Link to="/">
                     <p className="inline-flex items-center gap-2">
                         <ScanQrCode />
-                        <span className="text-zinc-700 font-family-frick">Simplify</span>
+                        <span className="text-zinc-700 font-family-frick italic">Simplify</span>
                     </p>
                 </Link>
             </div>

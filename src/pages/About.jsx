@@ -41,7 +41,7 @@ const About = () => {
     return (
 
 
-        <div className="mt-1 mb-10">
+        <div className="mt-0 mb-5">
 
             <HeroScrollDemo />
 

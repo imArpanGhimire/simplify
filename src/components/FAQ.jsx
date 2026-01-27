@@ -128,7 +128,7 @@ const FAQ = () => {
                     </div>
 
                     {/* Footer CTA */}
-                    <Link to='/queries'>
+                    <Link to='/Contact'>
                         <div className="mt-10    text-center">
                             <p className="text-zinc-600 mb-4">Still have any questions?</p>
                             <button className="px-8 py-3 bg-teal-500 text-white font-semibold rounded-lg  cursor-pointer">
