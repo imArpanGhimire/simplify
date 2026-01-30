@@ -2,12 +2,13 @@
 import React from "react";
 import { WobbleCard } from "../ui/wobble-card";
 import { FastForward, MonitorSmartphone, ShieldOff, Zap } from "lucide-react";
+
 export function WobbleCardDemo() {
     return (
         <div
             className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-5xl mx-auto w-full">
             <WobbleCard
-                containerClassName="col-span-1 lg:col-span-2 h-full bg-teal-500 min-h-[300px] lg:min-h-[250px]"
+                containerClassName="col-span-1 lg:col-span-2 h-full bg-slate-400 min-h-[300px] lg:min-h-[250px]"
                 className="">
                 <div className="max-w-xs">
                     <h2
@@ -18,9 +19,8 @@ export function WobbleCardDemo() {
                         Customers simply scan and order. No apps to install, no friction in the ordering process. Your customers get instant access to your menu from any device, any time.
                     </p>
                 </div>
-
             </WobbleCard>
-            <WobbleCard containerClassName="col-span-1 min-h-[250px] bg-slate-300">
+            <WobbleCard containerClassName="col-span-1 min-h-[250px] bg-teal-500">
                 <h2
                     className="inline-flex items-center gap-2 max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-900 font-outfit">
                     <FastForward /> Quick Setup

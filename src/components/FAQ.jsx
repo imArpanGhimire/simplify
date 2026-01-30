@@ -33,7 +33,7 @@ const FAQ = () => {
     ];
 
     return (
-        <div>
+        <div id='faq'>
             <div className="min-h-screen p-8 bg-transparent mt-20" style={{ fontFamily: 'Outfit, sans-serif' }}>
                 <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
@@ -87,7 +87,7 @@ const FAQ = () => {
         }
       `}</style>
 
-                <div className="max-w-2xl mx-auto">
+                <div className="max-w-2xl mx-auto" >
                     {/* Header */}
                     <div className="text-center mb-8">
                         <h1 className="text-4xl font-bold text-black mb-4">Common Questions</h1>

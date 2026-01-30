@@ -9,6 +9,8 @@ const LearnMore = () => {
             <TimelineDemo />
             {/* <AccordionDemo />    */}
             <FAQ />
+
+
         </div>
     )
 }

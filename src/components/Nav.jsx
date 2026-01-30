@@ -23,7 +23,7 @@ const Nav = () => {
             {/* RIGHT BUTTON */}
             <Link to='/Login'>
                 <button className="bg-teal-500 hover:bg-teal-600 cursor-pointer font-semibold text-white px-6 py-2 rounded-full text-sm">
-                    Log-In
+                    LOGIN
                 </button>
             </Link>
         </nav>
