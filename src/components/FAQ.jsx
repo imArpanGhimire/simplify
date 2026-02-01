@@ -34,7 +34,7 @@ const FAQ = () => {
 
     return (
         <div id='faq'>
-            <div className="min-h-screen p-8 bg-transparent mt-20" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            <div className="min-h-screen p-4 sm:p-6 md:p-8 bg-transparent mt-12 sm:mt-16 md:mt-20" style={{ fontFamily: 'Outfit, sans-serif' }}>
                 <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
@@ -87,15 +87,15 @@ const FAQ = () => {
         }
       `}</style>
 
-                <div className="max-w-2xl mx-auto" >
+                <div className="max-w-2xl mx-auto">
                     {/* Header */}
-                    <div className="text-center mb-8">
-                        <h1 className="text-4xl font-bold text-black mb-4">Common Questions</h1>
-                        <p className="text-zinc-600 text-lg">Restaurant owners asking about Simplify QR menu service</p>
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4 px-4">Common Questions</h1>
+                        <p className="text-zinc-600 text-sm sm:text-base md:text-lg px-4">Restaurant owners asking about Simplify QR menu service</p>
                     </div>
 
                     {/* FAQ Items */}
-                    <div className="space-y-0 rounded-xl p-8">
+                    <div className="space-y-0 rounded-xl p-4 sm:p-6 md:p-8">
                         {faqs.map((faq, index) => (
                             <div
                                 key={index}
@@ -104,21 +104,21 @@ const FAQ = () => {
                                 {/* Question Button */}
                                 <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                    className="w-full px-0 py-4 flex items-center justify-between text-left hover:opacity-80 transition-all duration-200 group"
+                                    className="w-full px-0 py-3 sm:py-4 flex items-center justify-between text-left hover:opacity-80 transition-all duration-200 group"
                                 >
-                                    <span className="text-zinc-700 font-normal text-lg transition-colors duration-200">
+                                    <span className="text-zinc-700 font-normal text-base sm:text-lg transition-colors duration-200 pr-4">
                                         {faq.question}
                                     </span>
                                     <ChevronDown
-                                        className={`w-5 h-5 text-zinc-700 flex-shrink-0 ${openIndex === index ? 'chevron-open' : 'chevron-closed'
+                                        className={`w-4 h-4 sm:w-5 sm:h-5 text-zinc-700 flex-shrink-0 ${openIndex === index ? 'chevron-open' : 'chevron-closed'
                                             }`}
                                     />
                                 </button>
 
                                 {/* Answer */}
                                 {openIndex === index && (
-                                    <div className="faq-content-open px-0 pb-4">
-                                        <p className="text-zinc-500 leading-relaxed">
+                                    <div className="faq-content-open px-0 pb-3 sm:pb-4">
+                                        <p className="text-zinc-500 leading-relaxed text-sm sm:text-base">
                                             {faq.answer}
                                         </p>
                                     </div>
@@ -129,9 +129,9 @@ const FAQ = () => {
 
                     {/* Footer CTA */}
                     <Link to='/Contact'>
-                        <div className="mt-10    text-center">
-                            <p className="text-zinc-600 mb-4">Still have any questions?</p>
-                            <button className="px-8 py-3 bg-teal-500 text-white font-semibold rounded-lg  cursor-pointer">
+                        <div className="mt-8 sm:mt-10 text-center px-4">
+                            <p className="text-zinc-600 mb-3 sm:mb-4 text-sm sm:text-base">Still have any questions?</p>
+                            <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-teal-500 text-white font-semibold rounded-lg cursor-pointer text-sm sm:text-base w-full sm:w-auto">
                                 Ask query
                             </button>
                         </div>

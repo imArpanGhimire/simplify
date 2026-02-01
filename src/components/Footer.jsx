@@ -95,15 +95,24 @@ const Footer = () => {
                     </p>
 
                     <div className="flex gap-6 text-white text-sm">
-                        <a href="#" className="hover:text-white/80 transition-colors duration-200">
-                            Privacy
-                        </a>
-                        <a href="#" className="hover:text-white/80 transition-colors duration-200">
-                            Terms
-                        </a>
-                        <a href="#" className="hover:text-white/80 transition-colors duration-200">
-                            Cookies
-                        </a>
+                        <Link to='/Privacy'>
+                            <p className="hover:text-white/80 transition-colors duration-200">
+                                Privacy
+                            </p>
+                        </Link>
+
+
+                        <Link to='/TermsAndConditions'>
+                            <p className="hover:text-white/80 transition-colors duration-200">
+                                Terms
+                            </p>
+                        </Link>
+
+                        <Link>
+                            <p className="hover:text-white/80 transition-colors duration-200">
+                                Cookies
+                            </p>
+                        </Link>
                     </div>
                 </div>
             </div>

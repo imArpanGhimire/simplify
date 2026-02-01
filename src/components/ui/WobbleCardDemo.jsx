@@ -15,7 +15,7 @@ export function WobbleCardDemo() {
                         className="inline-flex gap-2 items-center  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white font-outfit">
                         <MonitorSmartphone /> No App Downloads
                     </h2>
-                    <p className="mt-4 text-left  text-base/6 text-neutral-100 font-outfit">
+                    <p className="mt-4 text-base/6 text-neutral-100 font-outfit text-justify">
                         Customers simply scan and order. No apps to install, no friction in the ordering process. Your customers get instant access to your menu from any device, any time.
                     </p>
                 </div>
@@ -25,7 +25,7 @@ export function WobbleCardDemo() {
                     className="inline-flex items-center gap-2 max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-slate-900 font-outfit">
                     <FastForward /> Quick Setup
                 </h2>
-                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-slate-700 font-outfit">
+                <p className="mt-4 max-w-[26rem]   text-base/6 text-slate-700 font-outfit text-justify">
                     Go live in minutes, not days. <br />  <br /> Create your menu, generate QR codes, and start taking orders immediately. No technical knowledge required - our simple dashboard guides you through every step.
                 </p>
             </WobbleCard>
@@ -36,7 +36,7 @@ export function WobbleCardDemo() {
                         className="inline-flex gap-2 items-center max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white font-outfit">
                         <ShieldOff />  No Hardware Required
                     </h2>
-                    <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-100 font-outfit">
+                    <p className="mt-4 max-w-[26rem] text-base/6 text-neutral-100 font-outfit text-justify">
                         Works with any device. No expensive tablets, terminals, or proprietary equipment needed. Save on upfront costs and maintenance while keeping your system flexible and scalable.
                     </p>
                 </div>

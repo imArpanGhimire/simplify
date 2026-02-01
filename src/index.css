@@ -34,3 +34,14 @@
         height: 0;
     }
 }
+
+::selection {
+    background-color: #14b8a6;
+    /* teal-500 hex */
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #14b8a6;
+    color: white;
+}
