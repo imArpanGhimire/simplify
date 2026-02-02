@@ -1,16 +1,16 @@
 import { CircleCheckBigIcon } from 'lucide-react';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useTheme } from '../context/ThemeContext';
 
 const RealNewsletter = () => {
+    const { isDark } = useTheme();
     const [newsletterEmail, setNewsletterEmail] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Subscribed with:", newsletterEmail);
-
         // show toast on email submission
-
         toast.success("Your letter has been sent.", {
             icon: <CircleCheckBigIcon />,
             style: {
@@ -19,21 +19,26 @@ const RealNewsletter = () => {
                 fontFamily: "Outfit",
             },
         })
-
         // Reset after submission
         setNewsletterEmail("");
     };
 
     return (
         <section className="w-full py-20 px-6 flex justify-center">
-            <div className="relative max-w-4xl w-full sm:w-auto rounded-3xl bg-gradient-to-r from-slate-200/10 to-transparent p-10 md:p-14 shadow-sm overflow-hidden">
+            <div className={`relative max-w-4xl w-full sm:w-auto rounded-3xl p-10 md:p-14 shadow-sm overflow-hidden ${isDark
+                    ? 'bg-gradient-to-r from-slate-800/50 to-slate-700/30'
+                    : 'bg-gradient-to-r from-slate-200/10 to-transparent'
+                }`}>
                 {/* Subtle gradient blob */}
                 {/* <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal-500/10 blur-3xl"></div> */}
+
                 <div className="relative z-10 text-center font-outfit">
-                    <h2 className="text-3xl md:text-4xl text-slate-800 mb-4">
+                    <h2 className={`text-3xl md:text-4xl mb-4 ${isDark ? 'text-slate-100' : 'text-slate-800'
+                        }`}>
                         Stay Updated with us 📲
                     </h2>
-                    <p className="text-zinc-500 max-w-xl mx-auto mb-8">
+                    <p className={`max-w-xl mx-auto mb-8 ${isDark ? 'text-slate-300' : 'text-zinc-500'
+                        }`}>
                         Sign up to get the latest features, tips, and exclusive offers straight to your inbox.
                     </p>
                     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
@@ -43,7 +48,10 @@ const RealNewsletter = () => {
                             value={newsletterEmail}
                             onChange={(e) => setNewsletterEmail(e.target.value)}
                             required
-                            className="flex-1 rounded-xl px-5 py-3 text-slate-800 placeholder-slate-500 bg-slate-100/50 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                            className={`flex-1 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500 ${isDark
+                                    ? 'text-slate-100 placeholder-slate-400 bg-slate-700/50'
+                                    : 'text-slate-800 placeholder-slate-500 bg-slate-100/50'
+                                }`}
                         />
                         <button
                             type="submit"
@@ -52,7 +60,8 @@ const RealNewsletter = () => {
                             Subscribe
                         </button>
                     </form>
-                    <p className="text-xs text-slate-500 mt-4">
+                    <p className={`text-xs mt-4 ${isDark ? 'text-slate-400' : 'text-slate-500'
+                        }`}>
                         By subscribing, you agree to our privacy policy.
                     </p>
                 </div>
@@ -61,4 +70,4 @@ const RealNewsletter = () => {
     );
 };
 
-export default RealNewsletter;
+export default RealNewsletter;  

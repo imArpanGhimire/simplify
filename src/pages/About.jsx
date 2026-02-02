@@ -1,9 +1,12 @@
 import React from 'react';
 import { MessageSquare, Bell, BarChart3, Globe, Edit3, CreditCard } from 'lucide-react';
 import { HeroScrollDemo } from '../components/ui/HeroScrollDemo';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const About = () => {
+    const { isDark } = useTheme();
+
     const features = [
         {
             icon: <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-teal-500" />,
@@ -39,40 +42,50 @@ const About = () => {
 
     return (
         <div className="mt-0 mb-5">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <HeroScrollDemo />
             </div>
 
             <div className="max-w-6xl mx-auto mt-30 px-4 sm:px-6 lg:px-8">
-                {/* Header Section - More compact */}
-                <div className="text-center mb-8 sm:mb-10 lg:mb-12 font-outfit mt-8 md:mt-0">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
+                {/* Header Section */}
+                <div className="text-center mb-8 sm:mb-10 lg:mb-12 font-outfit mt-8 lg:mt-0">
+                    <h2 className={`text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 ${isDark ? 'text-slate-100' : 'text-gray-900'
+                        }`}>
                         Everything you need to <span className="text-teal-500">grow</span>
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto px-4">
+                    <p className={`text-sm sm:text-base max-w-xl mx-auto px-4 ${isDark ? 'text-slate-300' : 'text-gray-600'
+                        }`}>
                         Powerful features designed to streamline your restaurant operations
                     </p>
                 </div>
 
-                {/* Features Grid - Compact cards */}
+                {/* Features Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 font-outfit">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="group relative p-4 sm:p-5 lg:p-6 bg-transparent rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.05)]"
+                            className={`group relative p-4 sm:p-5 lg:p-6 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 ${isDark
+                                ? 'bg-slate-800/50 shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)]'
+                                : 'bg-transparent shadow-[inset_0_2px_8px_rgba(0,0,0,0.05)]'
+                                }`}
                         >
-                            {/* Icon with gradient background - smaller */}
-                            <div className="w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 rounded-lg bg-gradient-to-br from-teal-50 to-teal-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                            {/* Icon with gradient background */}
+                            <div className={`w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 ${isDark
+                                ? 'bg-gradient-to-br from-teal-900/50 to-teal-800/50'
+                                : 'bg-gradient-to-br from-teal-50 to-teal-100'
+                                }`}>
                                 {feature.icon}
                             </div>
 
-                            {/* Title - smaller */}
-                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1.5 sm:mb-2 group-hover:text-teal-600 transition-colors duration-300">
+                            {/* Title */}
+                            <h3 className={`text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 group-hover:text-teal-500 transition-colors duration-300 ${isDark ? 'text-slate-100' : 'text-gray-900'
+                                }`}>
                                 {feature.title}
                             </h3>
 
-                            {/* Description - smaller */}
-                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            {/* Description */}
+                            <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-gray-600'
+                                }`}>
                                 {feature.description}
                             </p>
 
@@ -82,10 +95,14 @@ const About = () => {
                     ))}
                 </div>
 
-                {/* Bottom CTA Section - more compact */}
+                {/* Bottom CTA Section */}
                 <div className="mt-12 sm:mt-14 lg:mt-16 text-center font-outfit">
-                    <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-4 sm:px-5 py-3 sm:py-2.5 bg-sky-100 rounded-full">
-                        <span className="text-xs sm:text-sm text-teal-700 font-medium">Ready to transform your restaurant?</span>
+                    <div className={`inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-4 sm:px-5 py-3 sm:py-2.5 rounded-full ${isDark ? 'bg-slate-800/50' : 'bg-sky-100'
+                        }`}>
+                        <span className={`text-xs sm:text-sm font-medium ${isDark ? 'text-slate-300' : 'text-teal-700'
+                            }`}>
+                            Ready to transform your restaurant?
+                        </span>
 
                         <Link to='/Getstarted'>
                             <button className="px-4 sm:px-4 cursor-pointer py-1.5 bg-teal-500 text-white rounded-full text-xs sm:text-sm font-semibold hover:bg-teal-600 transition-colors duration-300 shadow-sm hover:shadow-md">
@@ -99,4 +116,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default About;   

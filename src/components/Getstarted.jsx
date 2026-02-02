@@ -147,7 +147,12 @@ const Getstarted = () => {
                         {/* Terms */}
                         <div className='flex items-start gap-2 text-xs'>
                             <input type='checkbox' className='w-3.5 h-3.5 sm:w-4 sm:h-4 rounded border-slate-600 bg-slate-900 mt-0.5' />
-                            <span className='text-slate-400 text-xs sm:text-sm'>I agree to the <Link to='/TermsAndConditions'><a className='text-teal-500 hover:text-teal-400'>Terms and Conditions</a> </Link>and <Link to='/Privacy'><a className='text-teal-500 hover:text-teal-400'>Privacy Policy</a></Link></span>
+                            <span className='text-slate-400 text-xs sm:text-sm'>
+                                I agree to the{' '}
+                                <Link to='/TermsAndConditions' className='text-teal-500 hover:text-teal-400'>Terms and Conditions</Link>
+                                {' '}and{' '}
+                                <Link to='/Privacy' className='text-teal-500 hover:text-teal-400'>Privacy Policy</Link>
+                            </span>
                         </div>
 
                         {/* Sign up button */}
